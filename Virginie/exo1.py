@@ -3,6 +3,7 @@ from math import *
 
 
 def tarif_ttc(prixht, taxe):
+
     prixttc = prixht + (prixht * math.ceil(taxe) / 100)
     return prixttc
 
@@ -21,11 +22,14 @@ def main():
     # calculer le tarif TTC
 
     prixttc = tarif_ttc(prixht, taxe)
+    result = math.ceil(taxe)
+    if result % 2 == 1:
+        result = result + 1
+
 
 
     # afficher le périmètre à l'utilisateur
-    print("Le prix TTC de", nom_produit, "est de ", prixttc, "€ (taxe de", math.ceil(taxe), "%)")
-
+    print(f"Le prix TTC de {nom_produit} est de prixttc {prixttc} € (taxe de {result} %)")
 
 
 
