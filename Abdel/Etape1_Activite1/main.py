@@ -1,17 +1,12 @@
 import math
 
 
-
-def prix_produit(prixht, taxe):
-    taxeArrondiSup = math.ceil(taxe)
-    prixTTC = prixht + ((prixht * taxeArrondiSup) / 100)
+def prix_produit(prixht, result):
+    prixTTC = prixht + ((prixht * result) / 100)
     return prixTTC
 
+
 def main():
-    """Le programme principal."""
-
-    # nom_produit = input("Nom du produit : ")  # une chaîne de caractères
-
     nom_produit = input("Nom du produit : ")
     prixht = input("Prix HT : ")
     taxe = input("TVA : ")
@@ -19,10 +14,13 @@ def main():
     prixht = float(prixht)
     taxe = float(taxe)
 
-    # calculer le périmètre
     prixTTC = prix_produit(prixht, taxe)
+    result = math.ceil(taxe)
 
-    print("Le prix TTC du produit", nom_produit, "est de", prixTTC, "€ (taxes de", taxeArrondiSup, "%)")
+    if result % 2 == 1:
+        result += 1
+
+    print("Le prix TTC du produit", nom_produit, "est de", prixTTC, "€ (taxes de", result, "%)")
 
 
 if __name__ == "__main__":
