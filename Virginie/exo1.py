@@ -26,6 +26,8 @@ def main():
     if result % 2 == 1:
         result = result + 1
 
+        vyfyu
+
 
 
     # afficher le périmètre à l'utilisateur
