@@ -16,7 +16,6 @@ def main():
     ocurrence_valeur = ma_liste_entier.count(valeur)
     print("Le nombre d'occurence de la valeur dans la liste est ", ocurrence_valeur)
 
-fdgb e
 
 
 
