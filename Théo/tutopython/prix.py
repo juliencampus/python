@@ -27,9 +27,9 @@ class joueur:
 
 # Initialisation des deux joueurs
 blaz = input("ton blaz : ")
-j1 = joueur(10, blaz)
+j1 = joueur(5, blaz)
 blaz2 = input("ton blaz : ")
-j2 = joueur(10, blaz2)
+j2 = joueur(5, blaz2)
 
 # j1 et j2 jouent
 j1.jouer()
