@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f36b8503-f686-48b7-b241-2ecde3059f14" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Include/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/_distutils_hack/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-20.2.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pip-20.2.3.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip-20.2.3.dist-info/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/cli/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/commands/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/distributions/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/index/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/models/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/network/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/build/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/operations/install/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/req/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/resolution/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/resolution/legacy/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/resolution/resolvelib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/utils/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_internal/vcs/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/cachecontrol/caches/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/cachecontrol/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/certifi/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/chardet/cli/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/chardet/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/colorama/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/distlib/_backport/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/distlib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/html5lib/_trie/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/html5lib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/html5lib/filters/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/html5lib/treeadapters/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/html5lib/treebuilders/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/html5lib/treewalkers/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/idna/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/msgpack/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/packaging/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pep517/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/pkg_resources/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/progress/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/requests/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/resolvelib/compat/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/resolvelib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/toml/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/contrib/_securetransport/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/contrib/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/packages/backports/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/packages/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/packages/ssl_match_hostname/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/urllib3/util/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/_vendor/webencodings/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pip/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pkg_resources/_vendor/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pkg_resources/_vendor/packaging/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pkg_resources/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/pkg_resources/extern/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-49.2.1.dist-info/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-50.3.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-50.3.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools-50.3.0.dist-info/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/_distutils/command/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/_distutils/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/_vendor/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/_vendor/packaging/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/command/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools/extern/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install-3.9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.9.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.9.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.9.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pip3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/desktop.ini" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ip4XC2pMhCRkHahqnRFItZcANf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Etape1_Activite1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Utilisateur\Documents\GitHub\python\Abdel\Etape1_Activite1\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f36b8503-f686-48b7-b241-2ecde3059f14" name="Default Changelist" comment="" />
+      <created>1602591236260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602591236260</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2334" y="180" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602591338770">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2334" y="180" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602591338770" />
+    <state x="2660" y="292" key="FileChooserDialogImpl" timestamp="1602591336958">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2660" y="292" key="FileChooserDialogImpl/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602591336958" />
+  </component>
+</project>
