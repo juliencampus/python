@@ -2,7 +2,7 @@ import random
 
 def premier():
     haystack = [1, 1, 15, 14, 14, 15, 1, 2, 0 ,0]
-    needle = 1
+    needle = 14
     print(haystack.index(needle))
 
 def second():
