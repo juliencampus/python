@@ -17,7 +17,7 @@ def troisieme():
 
 def quatrieme():
     L1 = [13, 15, 12, 17, 15]
-    L2 = [18, 15, 14, 13, 19, 20,20]
+    L2 = [18, 15, 14, 13, 19, 20, 20]
     L3 = [x for x in set(L1)] + [y for y in set(L2) if y not in L1]
     print(L3)
 
