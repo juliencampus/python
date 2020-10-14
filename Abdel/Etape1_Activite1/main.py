@@ -14,11 +14,12 @@ def main():
     prixht = float(prixht)
     taxe = float(taxe)
 
-    prixTTC = prix_produit(prixht, taxe)
     result = math.ceil(taxe)
 
     if result % 2 == 1:
         result += 1
+
+        prixTTC = prix_produit(prixht, result)
 
     print("Le prix TTC du produit", nom_produit, "est de", prixTTC, "€ (taxes de", result, "%)")
 
