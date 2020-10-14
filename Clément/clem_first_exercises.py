@@ -3,8 +3,11 @@ import random
 import itertools
 
 
+<<<<<<< HEAD
+=======
 # Etape1
 # Activité 1
+>>>>>>> 102e93218894357ac41b8abb34749f939b390dde
 def taxe():
     print(f'Hi, say my name')  # Press Ctrl+F8 to toggle the breakpoint.
     name = input()
@@ -23,8 +26,11 @@ def taxe():
     else:
         print(f' avec la remise de 12% le prix total est de {stock*ttc_price - stock*ttc_price*12/100}')
 
+<<<<<<< HEAD
+=======
 
 # Activité 2
+>>>>>>> 102e93218894357ac41b8abb34749f939b390dde
 def just_price():
     good_price = random.randint(0, 100)
     print(good_price)
@@ -45,8 +51,11 @@ def just_price():
     else:
         print(f'T\'es vraiement une pauvre merde, le bon nombre était {good_price}')
 
+<<<<<<< HEAD
+=======
 
 # Etape 2
+>>>>>>> 102e93218894357ac41b8abb34749f939b390dde
 # Activité 1
 def lists_and_tuples(my_list, my_value):
     is_in_list = False
