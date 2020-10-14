@@ -1,5 +1,5 @@
 import math
-
+import requests
 
 def rectangle(width, length):
     area = width * length
@@ -60,7 +60,8 @@ def rude_repertory():
             choice = input("""L to list
             A to add
             S to sdelete
-            Q to quit""")
+            Q to quit
+            W to write""")
             try:
                 choice = choice[0]
                 xpctd = True
@@ -92,15 +93,24 @@ def rude_repertory():
                 dictionary.pop(key)
             else:
                 print("no exist fck off")
-        elif choice =="q":
+        elif choice == "q":
             break
+        elif choice == "w":
+            with open("repertory.csv", "w") as fp:
+                for k, v in dictionary.items():
+                    fp.write(f"{k};{v}\n")
+            print("written mah dude")
         else:
             print("don't be a twat...")
 
 
-rude_repertory()
+#rude_repertory()
+
+def img_counter(url) -> int:
+    return requests.get(url).text.count("<img")
 
 
 
+print(img_counter("https://www.programiz.com/python-programming/methods/dictionary/pop"))
 
 
