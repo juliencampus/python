@@ -20,12 +20,11 @@ def main():
     print(list_int_1)
     print(list_int_2)
 
-    for x in list_int_2:
-        if x not in list_int_1:
-           list_int_1.append(x)
+    # for x in list_int_2:
+    #     if x not in list_int_1:
+    #        list_int_1.append(x)
 
-
-    # list_int_1.extend(x for x in list_int_2 if x not in list_int_1)
+    list_int_1.extend(x for x in list_int_2 if x not in list_int_1)
     print(list_int_1)
 
 
