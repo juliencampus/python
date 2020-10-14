@@ -3,4 +3,5 @@ coefficients = [2, 3, 5, 4]
 
 notes_par_coeff = [note * coefficients[i] for i, note in enumerate(notes)]
 
-print(f'La moyenne est de : {round((sum(notes_par_coeff)/sum(coefficients)),2)}')
+print(f'La moyenne est de '
+      f': {round((sum(notes_par_coeff)/sum(coefficients)),2)}')
