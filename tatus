@@ -1,0 +1,258 @@
+[33mcommit b7909dc2a4580585bc8b861108b988a232cf6265[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Wed Oct 14 10:42:58 2020 +0200
+
+    added venv to gitignore
+
+[33mcommit 53fb1870f5c7623e6cb1cba3f9d5935a3fac0543[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 16:40:08 2020 +0200
+
+    2-3
+
+[33mcommit 5144cfadf9d4c8b93a8047527a0269f7331747cb[m
+Merge: 4c14030 6d404ba
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 16:36:44 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit 4c1403060d564eecfe421d42ea11a33cb22794fd[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 16:36:35 2020 +0200
+
+    3-3
+
+[33mcommit 6d404ba972e56a266163f4c9e8b19578dc5f713d[m
+Author: Clement-Chalencon <clement.chalencon@le-campus-numerique.fr>
+Date:   Tue Oct 13 16:34:50 2020 +0200
+
+    clem first commit
+
+[33mcommit 784e10ec4ade7fcb1622cecc35ca17026643fb03[m
+Author: VBLab <vbourgeon@hotmail.fr>
+Date:   Tue Oct 13 16:12:39 2020 +0200
+
+    exo1+math.ceil + modulo essai
+
+[33mcommit bd4f54d24cd14dc9afd9cfd160cdf4f7df7249da[m
+Merge: 226f2db d5471a5
+Author: VBLab <vbourgeon@hotmail.fr>
+Date:   Tue Oct 13 16:11:31 2020 +0200
+
+    Merge remote-tracking branch 'origin/main' into main
+
+[33mcommit 226f2dbb6def86dba8e5f6fd2f13e1d226010a00[m
+Merge: c95c6d1 de6e3bd
+Author: VBLab <vbourgeon@hotmail.fr>
+Date:   Tue Oct 13 16:11:12 2020 +0200
+
+    Merge remote-tracking branch 'origin/exo1+math.ceil' into main
+
+[33mcommit de6e3bd3d0ba0aba5a471601f4a8705c7047555e[m[33m ([m[1;31morigin/exo1+math.ceil[m[33m)[m
+Author: VBLab <vbourgeon@hotmail.fr>
+Date:   Tue Oct 13 16:02:44 2020 +0200
+
+    exo1+math.ceil + modulo
+
+[33mcommit d5471a5fb319d22c04c96ff29ca690c21555969b[m
+Merge: 8f015e3 52184db
+Author: AbdelkaderA <abdelkader.atamaa@le-campus-numerique.fr>
+Date:   Tue Oct 13 16:02:28 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit 8f015e3a1d9a1bbecf061d9b378f86af1fea309b[m
+Author: AbdelkaderA <abdelkader.atamaa@le-campus-numerique.fr>
+Date:   Tue Oct 13 16:02:11 2020 +0200
+
+    2eme Enoncer
+
+[33mcommit 52184dbe5f1baad4ce1b9add7970d99b80124738[m
+Author: FerrandezBenjamin <ferrandez.benjamin@le-campus-numerique.fr>
+Date:   Tue Oct 13 15:59:09 2020 +0200
+
+    commit added
+
+[33mcommit 7beddb1564277bbe1ff6b2cc3bef6b921bd2e71a[m
+Author: FerrandezBenjamin <ferrandez.benjamin@le-campus-numerique.fr>
+Date:   Tue Oct 13 15:58:34 2020 +0200
+
+    Exo 4
+
+[33mcommit 8f3f53cbd84de0b65702b6103b94531af98f83c8[m
+Author: FerrandezBenjamin <ferrandez.benjamin@le-campus-numerique.fr>
+Date:   Tue Oct 13 15:58:24 2020 +0200
+
+    Exo 3
+
+[33mcommit 41935258ea72c32adc320be6ddb6fdb2f8746e80[m
+Author: FerrandezBenjamin <ferrandez.benjamin@le-campus-numerique.fr>
+Date:   Tue Oct 13 15:56:08 2020 +0200
+
+    exo 1
+
+[33mcommit c95c6d1caeba7019d0a1612a76bfacd90aa2a9e4[m
+Merge: a9ed400 7f6697b
+Author: Marie-Laure <marie-laure.riedinger@le-campus-numerique.fr>
+Date:   Tue Oct 13 15:25:33 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit a9ed400f38c68d6294aeff9c3770a32294f256ab[m
+Author: Marie-Laure <marie-laure.riedinger@le-campus-numerique.fr>
+Date:   Tue Oct 13 15:25:28 2020 +0200
+
+    Jeu en 3 manches : OK
+
+[33mcommit 7f6697b6edbf9e473b76e81f463c158b1ed1f64a[m
+Merge: bd80979 2e98f21
+Author: VBLab <vbourgeon@hotmail.fr>
+Date:   Tue Oct 13 14:58:46 2020 +0200
+
+    Merge remote-tracking branch 'origin/exo1+math.ceil' into main
+
+[33mcommit bd809797839776981bbd6f1816e46f07b1759854[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 14:44:47 2020 +0200
+
+    2-2
+
+[33mcommit 2e98f2112a154dc5f7d979e2766667e1da70d58f[m
+Author: VBLab <vbourgeon@hotmail.fr>
+Date:   Tue Oct 13 14:43:34 2020 +0200
+
+    exo1+math.ceil
+
+[33mcommit ef0bc7af1a9ac5251ddcfb26f56fb2b3985167d1[m
+Author: Ducournl <louis.ducournau@le-campus-numerique.fr>
+Date:   Tue Oct 13 14:40:35 2020 +0200
+
+    Démarrage de l'Etape 2
+
+[33mcommit 6c7a91e204018adb9f3b17a7577ebd915dceb4af[m
+Merge: 1f23b0b de26c4f
+Author: Ducournl <louis.ducournau@le-campus-numerique.fr>
+Date:   Tue Oct 13 14:36:19 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit 1f23b0b65f1627f27e2c9be6627b50c6658bbe9e[m
+Author: Ducournl <louis.ducournau@le-campus-numerique.fr>
+Date:   Tue Oct 13 14:36:16 2020 +0200
+
+    Etape 1 - Activité 2
+
+[33mcommit de26c4f641ba0b4399ddfeb7643923cade7a6ba2[m
+Merge: ca92bf8 32a89c0
+Author: AbdelkaderA <abdelkader.atamaa@le-campus-numerique.fr>
+Date:   Tue Oct 13 14:17:08 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit ca92bf8ebf40348861451fea5c2714d6e5eac95f[m
+Author: AbdelkaderA <abdelkader.atamaa@le-campus-numerique.fr>
+Date:   Tue Oct 13 14:17:01 2020 +0200
+
+    1er enoncer
+
+[33mcommit 32a89c0fc1ed95fd734e982d8ca65060e634aa6d[m
+Merge: f46a12d 957ee28
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 14:13:21 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit f46a12d339f4fb29e3ef325ada5567bb7a58e1ef[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 14:13:11 2020 +0200
+
+    1-2
+
+[33mcommit 957ee2856f6c40ec100b4aee02a327f181d5b3c6[m
+Merge: f677e24 157489e
+Author: Ducournl <louis.ducournau@le-campus-numerique.fr>
+Date:   Tue Oct 13 13:54:05 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit f677e248eaa0fb4b7d24fabb5b25699fc77a9736[m
+Author: Ducournl <louis.ducournau@le-campus-numerique.fr>
+Date:   Tue Oct 13 13:53:57 2020 +0200
+
+    Etape 1 - Activité 2
+
+[33mcommit 157489e707f6d210882c9395428a9fe07edef8b5[m
+Merge: 4e9e8cd 210e1ad
+Author: AbdelkaderA <abdelkader.atamaa@le-campus-numerique.fr>
+Date:   Tue Oct 13 13:45:09 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit 4e9e8cd996e877e34bb3d5def793bbedf2a1508f[m
+Author: AbdelkaderA <abdelkader.atamaa@le-campus-numerique.fr>
+Date:   Tue Oct 13 13:45:02 2020 +0200
+
+    1er enoncer
+
+[33mcommit 210e1ad04fdf0c433d53d2c94d245675db4cf508[m
+Merge: a7cf2f2 486b5fd
+Author: Marie-Laure <marie-laure.riedinger@le-campus-numerique.fr>
+Date:   Tue Oct 13 13:40:57 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit a7cf2f26b7dbe5f1a3d14a1a12a92053dec87bd8[m
+Author: Marie-Laure <marie-laure.riedinger@le-campus-numerique.fr>
+Date:   Tue Oct 13 13:40:54 2020 +0200
+
+    Jeu en 1 manche : OK
+
+[33mcommit 1ce98c09e2d4a7b5167979688e383562ae77fbe1[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 12:04:54 2020 +0200
+
+    2-1-2
+
+[33mcommit 486b5fd1aefd30800d4bfc0aa70622944cd285f7[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 11:59:17 2020 +0200
+
+    venv
+
+[33mcommit 9a53e762337d9227a154a9326fa100af9de3eb37[m
+Merge: f96ab05 b91583e
+Author: Marie-Laure <marie-laure.riedinger@le-campus-numerique.fr>
+Date:   Tue Oct 13 11:38:36 2020 +0200
+
+    Merge branch 'main' of https://github.com/juliencampus/python into main
+
+[33mcommit f96ab052898300ba8802f022ca2e29188bf3e734[m
+Author: Marie-Laure <marie-laure.riedinger@le-campus-numerique.fr>
+Date:   Tue Oct 13 11:38:21 2020 +0200
+
+    Exercice 1 Calcul TVA : OK
+
+[33mcommit b91583ea258b949b425aaed54ccfc280df706278[m
+Author: Virginie <ulys.chambard@gmail.com>
+Date:   Tue Oct 13 11:37:16 2020 +0200
+
+    ulys 1 2
+
+[33mcommit b1e775ac1804ce74a4c3a572535b9a5cee52eda6[m
+Author: FerrandezBenjamin <58741067+FerrandezBenjamin@users.noreply.github.com>
+Date:   Tue Oct 13 11:36:12 2020 +0200
+
+    programme produit + taxe
+
+[33mcommit 6408887e90489cbd18c789372d9852a1c70577ec[m
+Author: unknown <julien.jehl@roboticia.com>
+Date:   Tue Oct 13 11:29:39 2020 +0200
+
+    init
+
+[33mcommit 9d40aa15ebdba07478c9dad0a060d4a98c709404[m
+Author: juliencampus <72790300+juliencampus@users.noreply.github.com>
+Date:   Tue Oct 13 10:31:15 2020 +0200
+
+    Create README.md
