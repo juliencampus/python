@@ -1,45 +1,48 @@
 import math
-from math import *
 
 
-def tarif_ttc(prixht, taxe):
+def produits_ttc(prixht, taxe, stock):
+    prixtotalttc = (stock * (prixht + (prixht * taxe) / 100))
+    return prixtotalttc
 
-    prixttc = prixht + (prixht * math.ceil(taxe) / 100)
-    return prixttc
+
+def remise(prixtotalttc, reduc):
+    return prixtotalttc - (prixtotalttc * reduc)
 
 
 def main():
     """Le programme principal."""
-    # demander le rayon à l'utilisateur
+    # demander le produit, la quantité, le prix ht et la taxe, à l'utilisateur
     nom_produit = input("Nom du produit : ")  # une chaîne de caractères
+    stock = input("quantité de produit ?")
     prixht = input("prixht :")
     taxe = input("TVA : ")
 
-    nom_produit = str(nom_produit)  # convertie en un nombre réel
+    # convertie en un nombre réel
+    nom_produit = str(nom_produit)
+    stock = float(stock)
     prixht = float(prixht)
     taxe = float(taxe)
+    reduc = 0.12
 
-    # calculer le tarif TTC
+    taxe = math.ceil(taxe)
+    if taxe % 2 != 0:
+        taxe = taxe + 1
 
-    prixttc = tarif_ttc(prixht, taxe)
-    result = math.ceil(taxe)
-    if result % 2 == 1:
-        result = result + 1
+    prixtotalttc = produits_ttc(prixht, taxe, stock)
 
-        vyfyu
-
-
-
-    # afficher le périmètre à l'utilisateur
-    print(f"Le prix TTC de {nom_produit} est de prixttc {prixttc} € (taxe de {result} %)")
-
-
+    if prixtotalttc >= 1000:
+        prixtotalttc = remise(prixtotalttc, reduc)
+        print(
+            f"Le total TTC du stock de  {nom_produit} est de prixttc {prixtotalttc} € (taxe de {taxe}% avec une remise de {reduc})")
+    else:
+        print(f"Le total TTC du stock de  {nom_produit} est de prixttc {prixtotalttc} € (taxe de {taxe} %)")
 
 if __name__ == "__main__":
-    main()
+        main()
+
 
 # def print_hi(name):
-#
 #     print(f'Hi, {name}')
 #
 #
