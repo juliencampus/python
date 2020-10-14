@@ -57,7 +57,6 @@ def real_price(option):
 # variables
 users = {1: {'total_time': 0, 'score': 0},
          2: {'total_time': 0, 'score': 0}}
-
 # naming players
 users[1]['name'] = input('joueur inconnu, donne moi ton nom\n')
 print(f'Bonjour {users[1]["name"]}')
@@ -79,6 +78,7 @@ while diff_choice == -1:
 
 game_set = 0
 while game_set < 3 and abs(users[1]['score']-users[2]['score']) < 2:
+
     good_price = real_price(diff_choice)
     print(f' prix a deviner {good_price}')
     game_set += 1
