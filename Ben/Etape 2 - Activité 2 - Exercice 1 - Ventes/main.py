@@ -6,8 +6,8 @@ dico ["Mlo"] = 16
 dico ["Abdel"] = 72
 
 
-def compter():
+def totalvente():
     compter = sum(dico.values())
     print(compter)
 
-compter()
+totalvente()
