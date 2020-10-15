@@ -1,3 +1,6 @@
+import requests
+
+
 # variables
 directory = {'BERNARD': '0676587423',
              'GERARD': '0680557823',
@@ -13,8 +16,7 @@ def list_directory(my_dir):
 
 
 def add_in_directory(my_dir):
-    name = input('Saisir le nom du contact :\n')
-    print(name.capitalize())
+    name = input('Saisir le nom du contact :\n').upper()
     number = input('Saisir le numero du contact :\n')
     my_dir[name] = number
     return 'contact ajouté'
@@ -22,10 +24,29 @@ def add_in_directory(my_dir):
 
 def delete_in_directory(my_dir):
     print(list_directory(my_dir))
-    name = input('quel contact voulez vous supprimer?')
-    my_dir.pop(name)
+    name = input('quel contact voulez vous supprimer?\n')
+    while True:
+        try:
+            my_dir.pop(name.upper())
+        except:
+            print(f'{name} n\'est pas dans la liste')
+            print(list_directory(my_dir))
+            name = input('quel contact voulez vous supprimer?\n')
+        else:
+            break
     return 'contact supprimé'
 
+
+def save_directory(my_dir):
+    with open("my_text_file.txt", "w") as fic:
+        for k in my_dir:
+            fic.write(k +': '+my_dir[k]+'\n')
+        fic.close()
+    return print("répertoire enregistré")
+
+
+def scrap_img_url(url):
+    return requests.get(url).text.count("<img")
 
 # main program
 while True:
@@ -33,16 +54,24 @@ while True:
                    'L: Lister\n'
                    'A: Ajouter\n'
                    'D: Supprimer\n'
-                   'Q: Quitter\n')
+                   'S: Save\n'
+                   'I: Récupérer les images d\'un site web\n'
+                   'Q: Quitter\n').upper()
 
-    if option.capitalize() == 'L':
+    if option == 'L':
         print(list_directory(directory))
-    elif option.capitalize() == 'A':
+    elif option == 'A':
         print(add_in_directory(directory))
-    elif option.capitalize() == 'D':
+    elif option == 'D':
         print(delete_in_directory(directory))
-    elif option.capitalize() == 'Q':
+    elif option == 'S':
+        print(save_directory(directory))
+    elif option == 'I':
+        print(scrap_img_url('https://le-campus-numerique.fr/'))
+    elif option == 'Q':
         print('Fin du programme')
         break
     else:
         print(f'option{option} non valide')
+
+
