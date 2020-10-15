@@ -5,7 +5,7 @@ class Character:
 
     def __init__(self, nom):
         self.nom = nom
-        self.vie = 200
+        self.vie = 50
         self.atk = random.randint(10, 20)
         self.mag = random.randint(10, 20)
         self.armo = random.randint(5, 15)
@@ -73,11 +73,15 @@ class Guerrier(Character) :
 
 
 def attackphy(Character, ennemi: Character) :
-    ennemi.vie = ennemi.vie - (Character.atk-ennemi.armo)
+    atk = Character.atk-ennemi.armo
+    ennemi.vie = ennemi.vie - atk if atk >=0 else 0
+    print(f"{ennemi.nom} n'a plus que {ennemi.vie} pdv")
 
 def attackmag(Character, ennemi: Character) :
-    ennemi.vie = ennemi.vie - (Character.mag-ennemi.magarmo)
-
+    atk = Character.mag - ennemi.magarmo
+    ennemi.vie = ennemi.vie - atk if atk >= 0 else 0
+    ennemi.vie = ennemi.vie - atk
+    print(f"{ennemi.nom} n'a plus que {ennemi.vie} pdv")
 
 def die(self) :
     if self.vie < 0 :
