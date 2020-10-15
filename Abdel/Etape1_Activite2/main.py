@@ -28,7 +28,7 @@ def main():
 
                     break
             except ValueError:
-                print("[le programme'] :  Please try again.")
+                print("Veuillez réessayer")
                 essai_user = essai_user - 1
                 print(f'Il vous reste {essai_user} essais')
         print(f'Tour {tour} ,le nombre a deviné est: {nombre_a_deviner}')
