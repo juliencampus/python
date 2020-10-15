@@ -12,12 +12,26 @@ class Character:
         self.magarmo = random.randint(5, 15)
 
 
+class Archer(Character) :
+    def __init__(self, nom):
+        Character.__init__(self, nom)
+        self.vie *= 1.2
+        self.armo *= 0.8
+        self.magarmo *= 0.8
 
 
+class Mage(Character) :
+    def __init__(self, nom):
+        Character.__init__(self, nom)
+        self.mag *= (1 * 1 + 1)
+        self.armo *= 0.8
 
 
-
-
+class Guerrier(Character) :
+    def __init__(self, nom):
+        Character.__init__(self, nom)
+        self.atk *= (1 * 1 + 1)
+        self.magarmo *= 0.7
 
 
 
