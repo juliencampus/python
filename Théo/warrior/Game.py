@@ -1,10 +1,16 @@
 from Character import Character
-from Guerrier import Guerrier
-from Mage import Mage
-from Archer import Archer
 
 
-pal = Mage("bob")
-print(pal.atk)
-fruk = Archer("ahah")
-print (fruk.vie, fruk.nom, fruk.atk)
+class Game(object):
+    def __init__(self):
+        self.team1 = []
+        self.team2 = []
+
+
+
+
+    def place(self,team: int, position: int, player: Player):
+        if team in range(0,2) and position in range(0,4):
+            # correct values
+        else:
+            return  TypeError('')
