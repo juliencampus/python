@@ -1,41 +1,64 @@
 import random
 
 
-class joueur:
+# Ititialisation des joueurs
+
+class Joueur:
     def __init__(self, vies, pseudo):
         self.vies = vies
         self.pseudo = pseudo
 
-    def jouer(self):
+# Faire perdre une vie au joueur
+
+    def perdreVie(self):
+        self.vies -= 1
+
+# Ititialisation de la partie)
+
+class Partie:
+    def __init__(self):
+        self.nombre = random.randint(0, 100)
+
+    def jouer(self, choixJoueur):
         appreciation = ""
-        n = random.randint(0, 100)
-        while self.vies > 0:
-            message = appreciation + "A toi ---> " + self.pseudo + ": " + str(self.vies) + " vies restantes.\n Nombre choisi:"
-            var = input(message)
-            var = int(var)
-            if var < n:
-                appreciation = "Trop petit !"
-            else:
-                appreciation = "Trop grand !"
-            if var == n:
-                print(f"Nice dude GG WP, il te restait : {self.vies} de vie(s).")
-                break
-            self.vies -= 1
+        if int(choixJoueur) < self.nombre:
+            return appreciation + "Trop petit !"
+        if int(choixJoueur) > self.nombre:
+            return appreciation + "C'est trop grand !"
+        else:
+            print(appreciation + "GG WP DUDE")
+            exit()
+
+
+
+
+
+
 
 
 # Initialisation des deux joueurs
 
-j1 = input("Mr.Joueur1,entre ton pseudo stp : ")
-j2 = input("Mr.Joueur2,entre ton pseudo stp : ")
-j1 = joueur(5, j1)
-j2 = joueur(5, j2)
+j1 = input("Mr.Joueur1, entre ton pseudo stp : ")
+j2 = input("Mr.Joueur2, entre ton pseudo stp : ")
+j1 = Joueur(5, j1)
+j2 = Joueur(5, j2)
 
 
-# Player 1 et Player 2 jouent
+# La partie se lance
+joueur = True
+partie = Partie()
 
+while j1.vies > 0 and j2.vies > 0:
+    nombre = input(f'A toi {j1.pseudo if joueur else j2.pseudo}, il te reste : {j1.vies if joueur else j2.vies} vie(s) ! choisi un nombre :')
 
-j1.jouer()
-j2.jouer()
+    if print(partie.jouer(nombre)) != 0:
+
+        if joueur:
+            j1.perdreVie()
+        else:
+            j2.perdreVie()
+
+    joueur = not joueur
 
 # Nombre de vies restantes à chaque joueur
 
