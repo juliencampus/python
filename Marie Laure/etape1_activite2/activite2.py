@@ -34,13 +34,13 @@ while tour < 3:
             print("************* Nouvelle manche *************")
             set_won += 1
             tour += 1
-            print(tour)
+            print(f'Manche { tour } / 3')
             break
         elif random_number < user_guess:
-            print("C'est trop grand. Il vous reste", attempt, "tentatives.")
+            print(f'C\'est trop grand. \nIl vous reste { attempt } tentatives.')
             continue
         else:
-            print("C'est trop petit. Il vous reste", attempt, "tentatives.")
+            print(f'C\'est trop petit. \nIl vous reste { attempt } tentatives.')
             continue
 
     if tour == 3:
@@ -48,5 +48,3 @@ while tour < 3:
             print("C'est gagné !")
         else:
             print("C'est perdu.")
-
-
