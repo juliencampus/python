@@ -12,6 +12,8 @@ class Character:
         self.magarmo = random.randint(5, 15)
 
 
+
+
 class Archer(Character) :
     def __init__(self, nom):
         Character.__init__(self, nom)
