@@ -1,4 +1,4 @@
-from warrior.Character import Character
+from Character import Character
 
 class Guerrier(Character) :
     def __init__(self, nom):

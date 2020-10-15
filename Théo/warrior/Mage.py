@@ -1,4 +1,4 @@
-from .Character import Character
+from Character import Character
 
 class Mage(Character) :
     def __init__(self, nom):

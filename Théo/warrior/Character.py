@@ -1,5 +1,4 @@
-from cmath import rect
-import randNom
+import random
 
 
 class Character:
@@ -11,6 +10,9 @@ class Character:
         self.mag = random.randint(10, 20)
         self.armo = random.randint(5, 15)
         self.magarmo = random.randint(5, 15)
+
+
+
 
 
 
