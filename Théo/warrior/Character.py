@@ -48,6 +48,8 @@ class Character:
         self._magarmo = magarmo
 
 
+
+
 class Archer(Character) :
     def __init__(self, nom):
         super().__init__(nom)
