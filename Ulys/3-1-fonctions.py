@@ -1,5 +1,5 @@
 import math
-
+import requests
 
 def rectangle(width, length):
     area = width * length
@@ -60,7 +60,8 @@ def rude_repertory():
             choice = input("""L to list
             A to add
             S to sdelete
-            Q to quit""")
+            Q to quit
+            W to write""")
             try:
                 choice = choice[0]
                 xpctd = True
@@ -74,10 +75,10 @@ def rude_repertory():
             aphonenbr = False
             while not aphonenbr:
                 try:
-                    guyzfone = int(input("the number of the phone is què ??"))
+                    guyzfone = int(input("the number of the phone is quoi ??"))
                     aphonenbr = True
                 except ValueError:
-                    print("wtf is dis ??! dats no phone nbr")
+                    print("dats no phone nbr")
                     aphonenbr = False
             dictionary[new_guy] = guyzfone
             print(f"is ok, {new_guy}'s phone is saved")
@@ -91,16 +92,25 @@ def rude_repertory():
                 print(f"poppin {key}'s record (phone was {to_delete})")
                 dictionary.pop(key)
             else:
-                print("no exist fck off")
-        elif choice =="q":
+                print("no exists")
+        elif choice == "q":
             break
+        elif choice == "w":
+            with open("repertory.csv", "w") as fp:
+                for k, v in dictionary.items():
+                    fp.write(f"{k};{v}\n")
+            print("written mah dude")
         else:
-            print("don't be a twat...")
+            print("don't be a ...")
 
 
-rude_repertory()
+#rude_repertory()
+
+def img_counter(url) -> int:
+    return requests.get(url).text.count("<img")
 
 
 
+print(img_counter("https://www.programiz.com/python-programming/methods/dictionary/pop"))
 
 
