@@ -8,7 +8,7 @@ def calcul_prix(un_prix, taxed, qty):
 	:param un_rayon: le rayon du cercle (positif)
 	:return le périmètre d'un cercle de rayon un_rayon
     """
-    arb = taxed / 100 + 1
+    arb = (taxed /100) + 1
     tva = math.ceil((arb * un_prix)*qty)
     return  tva
 

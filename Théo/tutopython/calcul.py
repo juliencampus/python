@@ -104,6 +104,7 @@ def repertoire():
             """ L pour lister
             A pour ajouter 
             S pour supprimer
+            E pour envoyer vers le repertoire
             Q pour quitter""")
             try:
                 choix = choix[0]
@@ -136,12 +137,16 @@ def repertoire():
                 dico.pop(key)
             else:
                 print("n'existe pas")
+        elif choix == "e":
+            with open("repertoire.csv", "w") as fp:
+                for k, v in dico.items():
+                    fp.write(f"{k};{v}\n")
+            print("envoyer vers le fichier repertoire")
         elif choix =="q":
             break
+
         else:
             print("mdr idiot !")
 
 
 repertoire()
-
-
