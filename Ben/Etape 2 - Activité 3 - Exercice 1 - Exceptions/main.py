@@ -7,51 +7,52 @@ class joueur:
         self.pseudo = pseudo
 
     def jouer(self):
-        appreciation = "?"
+        appreciation = ""
         n = random.randint(0, 100)
         while self.vies > 0:
-            message = appreciation + " A toi " + self.pseudo + " : " + str(self.vies) + "vies restantes. Nombre choisi:"
+            message = appreciation + "A toi ---> " + self.pseudo + ": " + str(self.vies) + " vies restantes.\n Nombre choisi:"
             var = input(message)
             var = int(var)
             if var < n:
-                appreciation = "Trop petit ! "
-                print(self.vies, var, appreciation)
+                appreciation = "Trop petit !"
             else:
-                appreciation = "Trop grand ! "
-                print(self.vies, var, appreciation)
+                appreciation = "Trop grand !"
             if var == n:
-                appreciation = "Nice dude GG WP"
-                print(self.vies, var, appreciation)
+                print(f"Nice dude GG WP, il te restait : {self.vies} de vie(s).")
                 break
             self.vies -= 1
+
+
 # Initialisation des deux joueurs
 
+j1 = input("Mr.Joueur1,entre ton pseudo stp : ")
+j2 = input("Mr.Joueur2,entre ton pseudo stp : ")
+j1 = joueur(5, j1)
+j2 = joueur(5, j2)
 
-joueur1 = joueur(10, "player 1")
-joueur2 = joueur(10, "player 2")
 
 # Player 1 et Player 2 jouent
 
 
-joueur1.jouer()
-joueur2.jouer()
+j1.jouer()
+j2.jouer()
 
 # Nombre de vies restantes à chaque joueur
 
 
 print("Nombre de vies restantes à chaque joueur")
-print(joueur1.pseudo + " : " + str(joueur1.vies) + " restantes")
-print(joueur2.pseudo + " : " + str(joueur2.vies) + " restantes")
+print(j1.pseudo + " : " + str(j1.vies) + " restantes")
+print(j2.pseudo + " : " + str(j2.vies) + " restantes")
 
 # Résultat de la partie
 
 
-print("Résultat de la partie")
-if joueur1.vies < joueur2.vies:
-    print(joueur1.pseudo + "a gagné la partie")
+print("------------Résultat de la partie-------------")
+if j1.vies > j2.vies:
+    print(j1.pseudo + " a gagné la partie")
 
-elif joueur1.vies == joueur2.vies:
+elif j1.vies == j2.vies:
     print("match nul")
 
 else:
-    print(joueur2.pseudo + " a gagné la partie")
+    print(j2.pseudo + " a gagné la partie")
