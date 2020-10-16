@@ -18,8 +18,9 @@ class Joueur:
 # Ititialisation de la partie)
 
 def rejouer():
-    gameplay = input("| Press 1 pour rejouer.                     | \n| Press 2 pour quitter.                     |\n---------------------------------------------\n")
-
+    gameplay = input("| Press 1 pour rejouer.                     | \n"
+                     "| Press 2 pour quitter.                     |\n"
+                     "---------------------------------------------\n")
 
     if int(gameplay) == 2:
         return False
@@ -27,10 +28,30 @@ def rejouer():
         return True
 
 
+# Choose level
+
+def choix_niveau():
+    choix = int (input(f'Press 1 pour un level easy -> Nombre entre 0 et 50 \n'
+                  f'Press 2 pour un level normal -> Nombre entre 0 et 100 \n'
+                  f'Press 3 pour un level hard -> Nombre entre 0 et 1000 \n'))
+    try:
+        if choix == 1:
+            nombre = random.randint(0, 50)
+            print(nombre)
+        if choix == 2:
+            nombre = random.randint(0, 100)
+            print(nombre)
+        if choix == 3:
+            nombre = random.randint(0, 1000)
+            print(nombre)
+
+    except ValueError:
+        print("Selectionne un chiffre s'il te plait.")
+
+
 class Partie:
     def __init__(self):
-        hgain = self.nombre = random.randint(0, 100)
-        print(hgain)
+        choix_niveau()
 
     def jouer(self, choixJoueur):
         appreciation = ""
@@ -62,7 +83,8 @@ def partiejouer():
     partie = Partie()
 
     while joueur1.vies > 0 and joueur2.vies > 0:
-        choix_joueur = input(f'A toi {joueur1.pseudo if joueur else joueur2.pseudo}, il te reste : {joueur1.vies if joueur else joueur2.vies} vie(s) ! choisi un nombre :')
+        choix_joueur = input(
+            f'A toi {joueur1.pseudo if joueur else joueur2.pseudo}, il te reste : {joueur1.vies if joueur else joueur2.vies} vie(s) ! choisi un nombre :')
 
         if not partie.jouer(choix_joueur):
             if joueur:
