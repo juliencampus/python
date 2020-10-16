@@ -8,12 +8,12 @@ class joueur:
 
     def jouer(self):
         appreciation = "?"
-      prixatrover =  n = random.randint(0,100)
+        n = random.randint(0,100)
         while self.vies > 0:
             message = appreciation + " -- " + self.pseudo + " : " + str(self.vies) + " vies restantes. Nombre choisi : "
             var = input(message)
             var = int(var)
-            if var < n :
+            if var < n:
                 appreciation = "trop bas"
                 print(self.vies, var, appreciation)
             else :
@@ -27,9 +27,9 @@ class joueur:
             self.vies -= 1
 
 # Initialisation des deux joueurs
-blaz = input("ton blaz : ")
+blaz = input("Joueur 1 = choisi un pseudo : ")
 j1 = joueur(5, blaz)
-blaz2 = input("ton blaz : ")
+blaz2 = input("Joueur 2 = choisi un pseudo  : ")
 j2 = joueur(5, blaz2)
 
 # j1 et j2 jouent

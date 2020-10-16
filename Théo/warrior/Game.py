@@ -1,5 +1,6 @@
 from Character import Character
-
+from window import Window
+from PyQt5.QtWidgets import QApplication
 
 class Game(object):
     TEAM_SIZE = 5
@@ -36,7 +37,14 @@ class Game(object):
             if self.teams[team][position]:
                 self.teams[team][position] = 0
         else:
-            raise ValueError('tequipe 1 ou 2 - position entre 0 et 4')
+            raise ValueError('equipe 1 ou 2 - position entre 0 et 4')
 
     def print_teams(self):
         [print(f"{self.teams[0][i].nom if self.teams[0][i] else 0}   vs   {self.teams[1][i].nom if self.teams[1][i] else 0}\n") for i in range(0, self.TEAM_SIZE)]
+
+    def display(self):
+        app = QApplication([])
+        w = Window(self.teams)
+        w.show()
+        app.exec_()
+
