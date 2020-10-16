@@ -51,5 +51,11 @@ print(f'La liste triée par ordre croissant : { tri_liste(liste_a_trier) }')
 print(f'La liste triée par ordre décroissant : { tri_liste(liste_a_trier, "decr") }')
 
 
+# Fonction de correspondance dans un dictionnaire
+
+def finding_nemo(phone_directory, char="A"):
+    print([x + ' : ' + phone_directory[x] for x in phone_directory if x[0] == char])
 
 
+directory = {'Clément': '0612345678', 'Ulys': '0601020304', 'Denis': '0709080706', 'Vivi': '0712326545', 'Amélie': '0102030405', 'Dni': '0563254178'}
+finding_nemo(directory, "D")
