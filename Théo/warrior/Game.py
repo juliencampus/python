@@ -31,7 +31,7 @@ class Game(object):
     def teams(self):
         return self._teams
 
-    def pop(self, team: int, position: int):
+    def pop_char(self, team: int, position: int):
         if team in range(0, 2) and position in range(0, self.TEAM_SIZE):
             if self.teams[team][position]:
                 self.teams[team][position] = 0
@@ -39,4 +39,4 @@ class Game(object):
             raise ValueError('tequipe 1 ou 2 - position entre 0 et 4')
 
     def print_teams(self):
-        [print(f"{self.teams[0][i].nom}   vs   {self.teams[1][i].nom}\n") for i in range(0, self.TEAM_SIZE)]
+        [print(f"{self.teams[0][i].nom if self.teams[0][i] else 0}   vs   {self.teams[1][i].nom if self.teams[1][i] else 0}\n") for i in range(0, self.TEAM_SIZE)]

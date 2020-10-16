@@ -26,7 +26,6 @@ def ask_user(max):
 
 
 def choose_level():
-
     levels = [50, 100, 1000]
     print("Level 1 : Trouver un numéro entre 0 et 50 \nLevel 2 : Trouver un numéro entre 0 et 100 \nLevel 3 : Trouver un numéro entre 0 et 1000")
 
@@ -41,13 +40,19 @@ def choose_level():
             print("Mauvais choix Buddy")
 
 
-def play_tour(player, max):
+def choose_name():
+    name = input("Quel est ton nom ?")
+    name = str(name)
+    return name
+
+
+def play_tour(player, max, lap, lap_data):
     time_begin = round(time.time())
 
     random_number = random.randint(0, max)
     attempt = 10
     win = False
-    print(player.name)
+    print(f'A toi de jouer { player.name } !')
 
     while attempt > 0:
         user_guess = ask_user(max)
@@ -79,30 +84,31 @@ def play_tour(player, max):
     lap_data[str(lap) + ':' + player.name] = {"Score": time_lap, "Player": player.name}
 
 
+def main():
+    # Choix des noms des personnages
+    name_player1 = choose_name()
+    player_1 = Player(name_player1, 5)
+    name_player2 = choose_name()
+    player_2 = Player(name_player2, 5)
 
-# on crée les personnages
-player_1 = Player("player_1", 5)
-player_2 = Player("player_2", 5)
+    # Initialisation du dictionnaire qui stocke les données de chaque tour
+    lap_data = {}
+    lap = 1
 
-# on crée une boucle de 5 tours :
-# tour = 0
-# le player 1 joue un tour
-# le player 2 joue un tour
-
-# on incrémente le nb de tours
-# tour += 1
-
-# a la fin des 5 tours, celui qui a gagné 3 tours /5 gagne le jeu
-
-lap_data = {}
-lap = 1
-
-while lap <= 5:
+    # Choix du niveau de difficulté
     max = choose_level()
-    play_tour(player_1, max)
-    play_tour(player_2, max)
-    print(lap_data)
-    lap += 1
+
+    while lap <= 5:
+        play_tour(player_1, max, lap, lap_data)
+        play_tour(player_2, max, lap, lap_data)
+
+        print(lap_data)
+        lap += 1
+
+
+if __name__ == '__main__':
+    main()
+
 
 
 
