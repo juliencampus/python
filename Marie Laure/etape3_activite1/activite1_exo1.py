@@ -1,5 +1,6 @@
 import math
 
+# Fonctions de calcul de périmètre, aire et volume
 
 def rectangle(largeur, longueur):
     perimetre = (largeur + longueur) * 2
@@ -34,4 +35,21 @@ print(f'Le périmètre du rectangle est : { perimetre_rectangle } et son aire es
 print(f'Le périmètre du cercle est : { perimetre_cercle } et son aire est : { aire_cercle }')
 print(f'Le volume du pavé droit est : { volume_pave }')
 print(f'Le volume du cylindre droit est : { volume_cylindre }')
+
+
+# Fonction de tri par ordre croissant ou décroissant
+
+def tri_liste(liste_a_trier, ordre="crois"):
+    item_liste = [item for item in liste_a_trier]
+    item_liste.sort(reverse=True if ordre == "decr" else False)
+    liste_a_trier = [item for item in item_liste]
+    return liste_a_trier
+
+
+liste_a_trier = [14, 22, 58, 67, 94, 26, 32]
+print(f'La liste triée par ordre croissant : { tri_liste(liste_a_trier) }')
+print(f'La liste triée par ordre décroissant : { tri_liste(liste_a_trier, "decr") }')
+
+
+
 
