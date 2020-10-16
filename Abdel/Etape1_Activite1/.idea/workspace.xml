@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f36b8503-f686-48b7-b241-2ecde3059f14" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -105,26 +104,30 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2659" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602661497587" />
-    <state x="2660" y="292" key="FileChooserDialogImpl" timestamp="1602591336958">
+    <state x="2660" y="292" key="FileChooserDialogImpl" timestamp="1602673489696">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2660" y="292" key="FileChooserDialogImpl/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602591336958" />
-    <state width="1899" height="261" key="GridCell.Tab.0.bottom" timestamp="1602661737437">
+    <state x="2660" y="292" key="FileChooserDialogImpl/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602673489696" />
+    <state width="1899" height="184" key="GridCell.Tab.0.bottom" timestamp="1602673732707">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.bottom/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602661737437" />
-    <state width="1899" height="261" key="GridCell.Tab.0.center" timestamp="1602661737437">
+    <state width="1899" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602673732707" />
+    <state width="1899" height="184" key="GridCell.Tab.0.center" timestamp="1602673732707">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.center/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602661737437" />
-    <state width="1899" height="261" key="GridCell.Tab.0.left" timestamp="1602661737437">
+    <state width="1899" height="184" key="GridCell.Tab.0.center/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602673732707" />
+    <state width="1899" height="184" key="GridCell.Tab.0.left" timestamp="1602673732707">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.left/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602661737437" />
-    <state width="1899" height="261" key="GridCell.Tab.0.right" timestamp="1602661737437">
+    <state width="1899" height="184" key="GridCell.Tab.0.left/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602673732707" />
+    <state width="1899" height="184" key="GridCell.Tab.0.right" timestamp="1602673732707">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state width="1899" height="261" key="GridCell.Tab.0.right/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602661737437" />
+    <state width="1899" height="184" key="GridCell.Tab.0.right/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602673732707" />
+    <state x="2381" y="170" key="SettingsEditor" timestamp="1602669606411">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2381" y="170" key="SettingsEditor/0.0.1920.1048/1920.0.1920.1050@1920.0.1920.1050" timestamp="1602669606411" />
     <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1602594277098">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>

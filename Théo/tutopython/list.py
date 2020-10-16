@@ -18,11 +18,26 @@ def trois() :
 
 def un() :
     haystack = [1, 1, 15, 14, 15, 1, 2, 14, 0, 0]
-    a = 0
+    a = 15
     print(haystack.index(a)+haystack[haystack.index(a)+1:].index(a)+1)
 
 
+def undeux() :
+    liste = [13, 15, 12, 17, 15, 18, 15, 17]
+    A = 17
 
+    index_found = 0
+    result = 1
+
+    for i, element in enumerate(liste):
+        if element == A:
+            index_found += 1
+            if index_found == 2:
+                result = i
+    print(result)
+
+un()
+undeux()
 def quatre() :
     list1 = [1, 1, 2, 3, 4, 5]
     list2 = [3, 4, 5, 6, 7]
@@ -41,4 +56,4 @@ def cinque() :
        s = s+notes[i]*coef[i]
        sc = sc+coef[i]
     print(s/sc)
-un()
+cinque()
