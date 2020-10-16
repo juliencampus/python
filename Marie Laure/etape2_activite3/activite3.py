@@ -101,6 +101,7 @@ def main():
     while lap <= 5:
         play_tour(player_1, max, lap, lap_data)
         play_tour(player_2, max, lap, lap_data)
+
         print(lap_data)
         lap += 1
 
