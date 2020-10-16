@@ -1,5 +1,5 @@
 import random
-
+import time
 
 # Ititialisation des joueurs
 
@@ -15,67 +15,82 @@ class Joueur:
 
 # Ititialisation de la partie)
 
+def rejouer():
+    gameplay = input(" Press 1 pour rejouer. \n Press 2 pour quitter.\n")
+
+    if int(gameplay) == 2:
+        return False
+    else:
+        return True
+
+
 class Partie:
     def __init__(self):
-        self.nombre = random.randint(0, 100)
+        hgain = self.nombre = random.randint(0, 100)
+        print(hgain)
 
     def jouer(self, choixJoueur):
         appreciation = ""
+        temps = round(time.time())
         if int(choixJoueur) < self.nombre:
-            return appreciation + "Trop petit !"
+            print(appreciation + "Trop petit !")
+            return False
         if int(choixJoueur) > self.nombre:
-            return appreciation + "C'est trop grand !"
+            print(appreciation + "C'est trop grand !")
+            return False
         else:
             print(appreciation + "GG WP DUDE")
-            exit()
-
-
-
-
-
-
+            temps_fin = round(time.time())
+            temps_partie = temps_fin - temps
+            print(temps_partie)
+            return True
 
 
 # Initialisation des deux joueurs
 
-j1 = input("Mr.Joueur1, entre ton pseudo stp : ")
-j2 = input("Mr.Joueur2, entre ton pseudo stp : ")
-j1 = Joueur(5, j1)
-j2 = Joueur(5, j2)
+def partiejouer():
+
+    j1 = input("Mr.Joueur1, entre ton pseudo stp : ")
+    j2 = input("Mr.Joueur2, entre ton pseudo stp : ")
+    joueur1 = Joueur(5, j1)
+    joueur2 = Joueur(5, j2)
 
 
-# La partie se lance
-joueur = True
-partie = Partie()
+    # La partie se lance
+    joueur = True
+    partie = Partie()
 
-while j1.vies > 0 and j2.vies > 0:
-    nombre = input(f'A toi {j1.pseudo if joueur else j2.pseudo}, il te reste : {j1.vies if joueur else j2.vies} vie(s) ! choisi un nombre :')
+    while joueur1.vies > 0 and joueur2.vies > 0:
+        choixJoueur = input(f'A toi {joueur1.pseudo if joueur else joueur2.pseudo}, il te reste : {joueur1.vies if joueur else joueur2.vies} vie(s) ! choisi un nombre :')
 
-    if print(partie.jouer(nombre)) != 0:
-
-        if joueur:
-            j1.perdreVie()
+        if not partie.jouer(choixJoueur):
+            if joueur:
+                joueur1.perdreVie()
+            else:
+                joueur2.perdreVie()
         else:
-            j2.perdreVie()
-
-    joueur = not joueur
-
-# Nombre de vies restantes à chaque joueur
+            print('fin de partie')
+            break
 
 
-print("Nombre de vies restantes à chaque joueur")
-print(j1.pseudo + " : " + str(j1.vies) + " restantes")
-print(j2.pseudo + " : " + str(j2.vies) + " restantes")
+        joueur = not joueur
 
-# Résultat de la partie
+    # Nombre de vies restantes à chaque joueur
 
 
-print("------------Résultat de la partie-------------")
-if j1.vies > j2.vies:
-    print(j1.pseudo + " a gagné la partie")
+    print("Nombre de vies restantes à chaque joueur")
+    print(joueur1.pseudo + " : " + str(joueur1.vies) + " restantes")
+    print(joueur2.pseudo + " : " + str(joueur2.vies) + " restantes")
 
-elif j1.vies == j2.vies:
-    print("match nul")
+nbPartie = 3
+while nbPartie > 0:
+    partiejouer()
+    nbPartie -= 1
+    r= rejouer()
+    if not r:
+        break
 
-else:
-    print(j2.pseudo + " a gagné la partie")
+
+
+
+
