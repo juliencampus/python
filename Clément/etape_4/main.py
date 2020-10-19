@@ -1,15 +1,10 @@
 import characters
-
+import game
 
 def main():
-    # warrior1 = characters.Character('toto')
-    # warrior1.string_chara()
-    arch = characters.Archer('arch')
-    arch.string_chara()
-    wizz = characters.Wizard('wizz')
-    wizz.string_chara()
-    arch.attack(wizz, 1)
-    arch.string_chara()
+    g = game.Game()
+    g.start_menu()
+
 
 
 if __name__ == "__main__":
