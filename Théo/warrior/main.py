@@ -58,6 +58,7 @@ def who_won_the(game):
             t2_victories += 1
     return "L'EQUIPE 1" if t1_victories > t2_victories else "L'EQUIPE 2" if t2_victories > t1_victories else "PERSONNE NE"
 
+
 choice = printer.ask("Commencer partie ? Y/N", ["y", "n"])
 if choice == "y":
     game = Game()
