@@ -1,4 +1,7 @@
 from math import sqrt
+from math import pi
+
+# en utilisant des formules
 
 
 def aire_peri_rect():
@@ -18,3 +21,14 @@ def aire_peri_rect():
 
 if __name__ == "__main__":
     aire_peri_rect()
+
+
+def aire_peri_cercle():
+    print("veuillez entrer le rayon du cercle: r =  ")
+    r = float(input())
+    s = pi*(r*r)
+    print("Aire du cercle = ", s)
+
+
+if __name__=="__main__":
+    aire_peri_cercle()
