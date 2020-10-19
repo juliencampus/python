@@ -7,29 +7,28 @@ class Character(ABC):
         self._attack_magic = random.randint(10, 20)
         self._attack_physic = random.randint(10, 20)
         self._shield_magic = random.randint(5, 15)
-        self._shield_physic = 10
+        self._shield_physic = random.randint(5, 15)
         self._exp = 1
         self._name = str(name).capitalize()
-        self._health = 200
+        self._health = 20
+        self.is_tired = False
 
-    def string_chara(self):
-        return print(f'Name: {self.name}\n'
-                     f'Health: {self.health}\n'
-                     f'Exp: {self.exp}\n'
-                     f'Attack_magic: {self.attack_magic}\n'
-                     f'Attack_physic: {self.attack_physic}\n'
-                     f'shield_magic: {self.shield_magic}\n'
-                     f'shield_physic: {self.shield_physic}\n')
+    def string_att(self):
+        return print(f'Name: {self.name} | Health: {self.health} | Attack_magic: {self.attack_magic} | Attack_physic: {self.attack_physic}')
 
-    def attack(self, Character, option):
-        print('Santé', Character.health)
+    def string_def(self):
+        return print(
+            f'Name: {self.name} | Health: {self.health} | Shield_magic: {self.shield_magic} | shield_physic: {self.shield_physic}')
+
+    def attack(self, character, option):
         if str(option) == '1':
             print(f'{self._name} lance une attaque magique')
-            Character.health = (Character.shield_magic-self._attack_magic)
+            character.health = (character.shield_magic-self._attack_magic)
         elif str(option) == '2':
             print(f'{self._name} lance une attaque physique')
-            Character.health = (Character.shield_physic-self._attack_physic)
-        print('Santé', Character.health)
+            character.health = (character.shield_physic-self._attack_physic)
+        print(f'{self.name} attaque {character.name}')
+        self.is_tired = True
 
 
     # getters

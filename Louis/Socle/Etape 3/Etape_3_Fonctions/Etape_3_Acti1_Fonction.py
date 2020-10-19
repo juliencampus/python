@@ -41,12 +41,6 @@ def main ():
 
     # Fonction de tri par ordre croissant ou décroissant
 
-    # def sort_list(li, rev=False):
-    #     li.sort(reverse=rev)
-    #     return li
-    #
-    # l1 = [5, 8, 6, 5, 2, 3]
-    # print(sort_list(l1, True))
 
 
     def tier_liste(liste, tri=False):
@@ -56,16 +50,14 @@ def main ():
     liste = [5, 8, 6, 8, 9, 1, 3, 7, 5, 3]
     print(tier_liste(liste, True))
 
+    # Fonction de correspondance dans un dictionnaire
 
-    def give_dict_value(my_dict, char):
-        return [my_dict[e] for e in my_dict if e[0].capitalize() == char.capitalize()]
+    def finding_nemo(phone_directory, char="A"):
+        print([x + ' : ' + phone_directory[x] for x in phone_directory if x[0] == char])
 
-    dict1 = {'Bernard': '0676587423', 'Berard': '0680557823', 'Micheline': '0780587823', 'Audrey': '0680558723',
-             'marceline': '0698588754'}
-    print(give_dict_value(dict1, 'm'))
-
-    dict_tel_nom = {'Bernard': '0676587423', 'Berard': '0680557823', 'Micheline': '0780587823', 'Audrey': '0680558723',
-                     'marceline': '0698588754'}
+    directory = {'Clément': '0612345678', 'Ulys': '0601020304', 'Denis': '0709080706', 'Vivi': '0712326545',
+                 'Amélie': '0102030405', 'Dni': '0563254178'}
+    finding_nemo(directory, "D")
 
 
 if __name__ == "__main__":
