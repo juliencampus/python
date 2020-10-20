@@ -23,7 +23,7 @@ class Calendar(HTMLCalendar):
         cal += f'{self.formatweekheader()}\n'
         week = ''
         for theweek in self.monthdays2calendar(self.year, self.month):
-            if datetime.today() in theweek:
+            if datetime.today().strftime("%d") in [item for item in theweek]: ## SAI LA MAIRD ICI
                 for d, weekday in theweek:
                     week += self.formatday(d)
                 cal += f'<tr> {week} </tr>'
