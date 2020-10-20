@@ -15,7 +15,7 @@ class Character:
 class Wizard(Character):
 
     def __init__(self, name="Gandlaf"):
-        super(Wizard, self).__init__(name)
+        super().__init__(name)
         self.magical_attack *= 2
         self.shield = self.shield * 0.8
 
@@ -23,7 +23,7 @@ class Wizard(Character):
 class Archer(Character):
 
     def __init__(self, name="Legolas"):
-        super(Archer, self).__init__(name)
+        super().__init__(name)
         self.health = self.health * 1.2
         self.shield = self.shield * 0.8
 
@@ -31,7 +31,7 @@ class Archer(Character):
 class Warrior(Character):
 
     def __init__(self, name="Gimli"):
-        super(Warrior, self).__init__(name)
+        super().__init__(name)
         self.physical_attack *= 2
         self.magical_shield = self.magical_shield * 0.7
 
@@ -56,6 +56,7 @@ print(player3.name)
 print(player4.name)
 print(player5.name)
 print(player6.name)
+print(Warrior.__mro__)
 
 
 
