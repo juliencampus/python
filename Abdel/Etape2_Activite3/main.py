@@ -12,14 +12,14 @@ class joueur:
         n = random.randint(0, 100)
         while self.vies > 0:
             try:
-                message = f'{resultat} {self.pseudo} : {str(self.vies)} vies restantes alor choisi un nombre : '
+                message = f'{resultat} {self.pseudo} : {str(self.vies)} vies restantes alors choisi un nombre : '
                 var = input(message)
                 var = int(var)
                 if var < n:
-                    resultat = "Resultat est superieur"
+                    resultat = ": Le resultat est superieur"
                     print(var, resultat)
                 else:
-                    resultat = "Resultat est inferieur"
+                    resultat = ": Le resultat est inferieur"
                     print(var, resultat)
                 if var == n:
                     resultat = " Bravo, tu as trouvé !"
@@ -28,15 +28,13 @@ class joueur:
             except ValueError:
                 print("Mauvaise saisie, veuillez entré un nombre")
 
-                self.vies -= 1
+            self.vies -= 1
 
 
 nom_joueur1 = input("Joueur 1 = Entrer votre nom : ")
 joueur1 = joueur(5, nom_joueur1)
 nom_joueur2 = input("Joueur 2 = Entrer votre nom  : ")
 joueur2 = joueur(5, nom_joueur2)
-
-
 
 joueur1.jouer()
 joueur2.jouer()
