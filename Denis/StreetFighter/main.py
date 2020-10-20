@@ -1,23 +1,23 @@
 # importations à faire pour la réalisation d'une interface graphique
 
 import players
+import threading
 
 import time
 import sys
 from PyQt5.QtCore import Qt, QSize, QRect
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QImage, QPalette, QBrush, QPixmap, QTransform, QPainter
+from PyQt5.QtGui import QImage, QPalette, QBrush, QPixmap, QTransform, QPainter, QColor
 from PyQt5.QtMultimedia import QSound
 
-game = 0
 
 class Fenetre(QWidget):
-    def __init__(self, sound):
+    def __init__(self, sound, player):
         QWidget.__init__(self)
         self.setWindowTitle("Street Fighter")
         self.sound = sound
-        self.sate = 0
-        self.player = players.Player("assets/ryu_normal.png", "assets/ryu_fight.png")
+        self.state = 0
+        self.player = player
         self.ennemi = players.Player("assets/ken_normal_left.png", "assets/ken_fight_left.png")
         self.playSound("assets/sounds/title.wav")
         self.resize(1200, 1000)
@@ -25,27 +25,28 @@ class Fenetre(QWidget):
 
 
     def mousePressEvent(self, event):
-        if event.button() == Qt.LeftButton:
+        if event.button() == Qt.LeftButton and self.state == 0:
             self.playSound("assets/sounds/combat.wav")
             self.changeBack("assets/fond.jpg")
+            self.state = 1
             self.game()
         elif event.button() == Qt.RightButton:
             print("Appui bouton droite")
 
     def keyPressEvent(self, event):
-        if event.key() == Qt.Key_Right:
-            self.player.isFight = False
-            self.player.x += 20
-            self.update()
+        if self.state == 1:
+            if event.key() == Qt.Key_Right and player.x < self.width() - 200:
+                self.player.x += 20
+                self.update()
 
-        elif event.key() == Qt.Key_Left:
-            self.player.isFight = False
-            self.player.x -= 20
-            self.update()
+            elif event.key() == Qt.Key_Left and player.x > 10:
+                self.player.x -= 20
+                self.update()
 
-        elif event.key() == Qt.Key_Space:
-            self.player.isFight = True
-            self.update()
+            elif event.key() == Qt.Key_Space:
+                self.player.fight(self.ennemi)
+                self.playSound("assets/sounds/punch.wav")
+                self.update()
 
         # elif event.key() == Qt.Key_Up:
         #     self.player.y -= 60
@@ -60,19 +61,70 @@ class Fenetre(QWidget):
         self.setPalette(palette)
 
 
-    def showPlayer(self, player, fight=False, rotate=False):
+    def showPlayer(self, player):
         label = QPainter(self)
         label.begin(self)
-        pixmap = QImage(player.picFight if fight else player.picNormally)
-        # label.setGeometry(player.x, player.y, player.width, player.height)
+        pixmap = QImage(player.picFight if player.isFight else player.picNormally)
         label.drawImage(player.x, player.y, pixmap)
+
+    def drawLife(self):
+        # Player :
+        painter = QPainter(self)
+        painter.begin(self)
+        painter.setBrush(QColor(0, 0, 0, 50))
+        painter.drawRect(8, 100, round((self.width() / 2) - 20), 20)
+
+        painterLife = QPainter(self)
+        painterLife.begin(self)
+        painterLife.setBrush(QColor(0, 255, 0))
+        percentLife = self.player.life / 200
+        painterLife.drawRect(9, 101, round((self.width() / 2 - 20) * percentLife), 18)
+
+        # Ennemi :
+        painterEnnemi = QPainter(self)
+        painterEnnemi.begin(self)
+        painterEnnemi.setBrush(QColor(0, 0, 0, 50))
+        painterEnnemi.drawRect(round(self.width() / 2 + 30), 100, round((self.width() / 2) - 40), 20)
+
+        painterLifeEnnemi = QPainter(self)
+        painterLifeEnnemi.begin(self)
+        painterLifeEnnemi.setBrush(QColor(0, 255, 0))
+        percentLifeEnnemi = self.ennemi.life / 200
+        painterLifeEnnemi.drawRect(round(self.width() / 2 + 31), 101, round((self.width() / 2 - 40) * percentLifeEnnemi), 18)
+
 
 
     def paintEvent(self, event):
-        print(event)
-        self.showPlayer(self.player, self.player.isFight)
-        self.showPlayer(self.ennemi)
+        if self.state == 1:
+            self.showPlayer(self.player)
+            self.showPlayer(self.ennemi)
+            self.drawLife()
+            if self.player.life <= 0:
+                self.playSound("assets/sounds/combat.wav", False)
+                self.playSound("assets/sounds/youlose.wav")
+                self.state = 2
+            if self.ennemi.life <= 0:
+                self.playSound("assets/sounds/combat.wav", False)
+                self.playSound("assets/sounds/youwin.wav")
+                self.state = 3
+        elif self.state == 2:
+            print("U lose")
+            self.drawLose()
+        elif self.state == 3:
+            print("U Win")
+            self.drawWin()
 
+    def drawLose(self):
+        painter = QPainter(self)
+        painter.begin(self)
+        painter.setBrush(QColor(250, 20, 0))
+        painter.drawText(50, 200, 30, 10, "You Lose !")
+
+    def drawWin(self):
+        painter = QPainter(self)
+        painter.begin(self)
+        painter.setBrush(QColor(250, 20, 0))
+        painter.drawText(50, 200, 30, 10, "You Win !")
 
 
     def playSound(self, url, play=True):
@@ -84,28 +136,34 @@ class Fenetre(QWidget):
     def game(self):
         self.showPlayer(self.player)
         self.ennemi.x = self.width() - 200
-        self.showPlayer(self.ennemi, False, True)
+        self.showPlayer(self.ennemi)
 
 
 def mainTitle(fen):
     fen.changeBack("assets/start.png")
 
+def sync(f_stop, player):
+    if not f_stop.is_set():
+        player.isFight = False
+        threading.Timer(1, sync, [f_stop, player]).start()
 
 app = QApplication(sys.argv)
 
 # création d'une fenêtre avec QWidget dont on place la référence dans fen
 
 sound = QSound("")
-fen = Fenetre(sound)
 
 # la fenêtre est rendue visible
-fen.show()
-# fen.playSound("assets/sounds/title.wav")
 
-mainTitle(fen)
+# fen.playSound("assets/sounds/title.wav")
 
 player = players.Player("assets/ryu_normal.png", "assets/ryu_fight.png")
 
+f_stop = threading.Event()
+sync(f_stop, player)
+fen = Fenetre(sound, player)
+fen.show()
+mainTitle(fen)
 # fen.showPlayer(player, player.x, player.y)
 
 # exécution de l'application, l'exécution permet de gérer les événements
