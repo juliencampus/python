@@ -1,30 +1,40 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
+from django import generic
 
 from .models import Choice, Question
 
 # Create your views here.
 
-
-def index(request):
-    # On récupère les 5 dernières questions en BDD
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    # On renvoie la variable latest_question_list vers la vue
-    context = {
-        'latest_question_list': latest_question_list,
-    }
-    return render(request, 'polls/index.html', context)
+# Utilisation de classes pour générer deux vues génériques : ListView et DetailView.
+# Elles permettent l’abstraction des concepts « afficher une liste d’objets »
+# et « afficher une page détaillée pour un type particulier d’objet »
 
 
-def detail(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
+class IndexView(generic.ListView):
+    # Par défaut, ListView utilise un gabarit appelé <nom app>/<nom modèle>_list.html
+    # Ici, on lui dit d'utiliser le gabarit qu'on a créé
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        return Question.objects.order_by('pub_date')[:5]
 
 
-def results(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/results.html', {'question': question})
+class DetailView(generic.DetailView):
+    # On indique à Django sur quel Model il doit agir (voir models.py)
+    model = Question
+    # On lui dit d'utiliser le gabarit qu'on a créé
+    template_name = 'polls/detail.html'
+
+
+class ResultView(generic.DetailView):
+    model = Question
+    template_name = 'polls/results.html'
+
+
+# Utilisation d'une fonction pour générer une vue
 
 
 def vote(request, question_id):
