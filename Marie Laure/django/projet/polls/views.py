@@ -2,6 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
+from django.utils import timezone
 
 from .models import Choice, Question
 
@@ -19,7 +20,11 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        return Question.objects.order_by('pub_date')[:5]
+        """
+        Renvoie la liste des 5 dernières questions (hors questions futures)"""
+        return Question.objects.filter(
+            pub_date__lte=timezone.now()
+        ).order_by('-pub_date')[:5]
 
 
 class DetailView(generic.DetailView):
@@ -27,6 +32,12 @@ class DetailView(generic.DetailView):
     model = Question
     # On lui dit d'utiliser le gabarit qu'on a créé
     template_name = 'polls/detail.html'
+
+    def get_queryset(self):
+        """
+        N'affiche que les questions déjà publiées.
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
 class ResultView(generic.DetailView):
