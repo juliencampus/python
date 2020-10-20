@@ -3,3 +3,5 @@
 .idea
 venv
 
+*.pyc
+Marie Laure/django/projet/projet/settings.py
