@@ -3,3 +3,6 @@
 .idea
 venv
 
+*.pyc
+Marie Laure/django/projet/projet/settings.py
+Ulys/django/apnter/node_modules
