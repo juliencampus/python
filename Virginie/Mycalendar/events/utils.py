@@ -1,7 +1,7 @@
 from calendar import HTMLCalendar
 from datetime import datetime as dtime, date, time
 import datetime
-from .models import Appointment
+from .models import Event
 
 
 class EventCalendar(HTMLCalendar):
@@ -16,10 +16,7 @@ class EventCalendar(HTMLCalendar):
         events_from_day = events.filter(day__day=day)
         events_html = "<ul>"
         for event in events_from_day:
-            events_html += '<div style="background: #40a8c4">'
             events_html += event.get_absolute_url() + "<br>"
-            events_html += event.name + " " + event.firstname + "<br>"
-            events_html += "</div>"
         events_html += "</ul>"
 
         if day == 0:
@@ -39,7 +36,7 @@ class EventCalendar(HTMLCalendar):
         Return a formatted month as a table.
         """
 
-        events = Appointment.objects.filter(day__month=themonth)
+        events = Event.objects.filter(day__month=themonth)
 
         v = []
         a = v.append
@@ -55,3 +52,4 @@ class EventCalendar(HTMLCalendar):
         a('</table>')
         a('\n')
         return ''.join(v)
+
