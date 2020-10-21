@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -24,3 +25,7 @@ class Appointment(models.Model):
         default=SIMPLE,
         help_text=u'Sélectionnez un type de rendez-vous'
     )
+
+    def get_absolute_url(self):
+        url = reverse('admin:%s_%s_change' % (self._meta.app_label, self._meta.model_name), args=[self.id])
+        return u'<a href="%s">%s</a>' % (url, str(self.start_time))
