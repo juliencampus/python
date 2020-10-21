@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from calendar import HTMLCalendar
 from .models import Appointment
+import logging
 
 
 class Calendar(HTMLCalendar):
@@ -23,7 +24,8 @@ class Calendar(HTMLCalendar):
         cal += f'{self.formatweekheader()}\n'
         week = ''
         for theweek in self.monthdays2calendar(self.year, self.month):
-            if datetime.today().strftime("%d") in [item for item in theweek]: ## SAI LA MAIRD ICI
+            if datetime.today().strftime("%d") in [item[0] for item in theweek]:
+                logging.warning(theweek)
                 for d, weekday in theweek:
                     week += self.formatday(d)
                 cal += f'<tr> {week} </tr>'
