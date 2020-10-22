@@ -12,14 +12,21 @@
 <div class="container">
 <div class="row">
 
-{% for el in rdv %}
-    {% for ele in el %}
-        <div class="card col" style="width: 18rem;">
-        <div class="card-body">
-            <p class="card-title">{{ ele.date |date:'d/m/y'}} {{ ele.date |date:'l'}}</p>
-        </div>
+{% for day, rdv in days.items %}
+    {% if day.isoweekday < 6 %}
+<div class="card col" style="width: 18rem;">
+    <div class="card-body">
+
+        <p class="card-title">{{ day|date:'l d/m' }}</p>
+        <hr>
+        {% for el in rdv %}
+            <p class="card-text">{{ el.0|date:'H:i' }}</p>
+            <p class="card-text">{{ el.1 }}</p>
+            <hr>
+        {% endfor %}
     </div>
-    {% endfor %}
+</div>
+    {% endif %}
 {% endfor %}
 
 </div>
