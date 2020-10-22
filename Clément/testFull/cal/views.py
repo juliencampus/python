@@ -13,11 +13,12 @@ def index(request):
              'start': event.start.strftime("%Y-%m-%dT%H:%M:%S"),
              'end': event.end.strftime("%Y-%m-%dT%H:%M:%S"), 'allday': event.allday, 'url': f'http://127.0.0.1:8000/calendar/detail/{event.id}/'}
         events_list.append(e)
-    print(events_list)
     context = {'format_events': json.dumps(events_list)}
     return render(request, 'cal/index.html', context)
 
 
 def detail(request, event_id):
-    print('why')
-    return render(request, 'cal/detail.html')
+    event = Event.objects.get(pk=event_id)
+    print(event.title)
+    context = {'event_detail': event}
+    return render(request, 'cal/detail.html', context)
