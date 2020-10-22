@@ -3,8 +3,11 @@ from django.http import HttpResponse
 from datetime import date
 import datetime
 from django.utils.safestring import mark_safe
+from django.utils.datastructures import MultiValueDictKeyError
 
+from .forms import RdvForm
 from .models import Rdv
+
 def findIndex(heure):
     heureTotal = heure.hour * 60 + heure.minute
     return round((heureTotal - (8 * 60)) /15)
@@ -46,14 +49,15 @@ def takerdv(request, idHeure, date):
 
     user = request.user.username
 
-    return render(request, 'calendrier/takerdv.html', {'heure': heureTotal, 'date': date, 'user': user})
+    form = RdvForm(initial={'date': date, 'heure': heure})
 
-def saveRdv(request, oui):
-    # rdv = Rdv()
-    # rdv.heure = request.POST['heure']
-    # rdv.date = request.POST['date']
-    # rdv.types = request.POST['types']
-    #
-    # rdv.save()
+    return render(request, 'calendrier/takerdv.html', {'heure': heureTotal, 'date': date, 'user': user, 'form': form})
 
-    return render(request, 'calendrier/test.html', {'request': request})
+def saveRdv(request):
+    f = RdvForm(request.POST)
+    if f.is_valid():
+        f.save()
+    else:
+        f.save()
+
+    return HttpResponse("Saaaaave")
