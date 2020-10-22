@@ -25,10 +25,9 @@ export default new Vuex.Store({
         // }
       };
       axios
-        .get('http://127.0.0.1:8000/appointments', config)
+        .get('http://192.168.0.110/appointments', config)
         .then(res => {
-          let apnts = res.data 
-          console.log(apnts)   
+          let apnts = res.data  
           commit('setAppointments', apnts)
         })
         .catch(error => {
