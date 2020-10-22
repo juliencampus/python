@@ -3,5 +3,6 @@
 
 def binaire():
     r = input(f'Entre le nom de ton fichier :')
-    r = open("test.bin", "w")
+    r = open(f"{r}.bin", "w")
     print(r)
+    r.close()
