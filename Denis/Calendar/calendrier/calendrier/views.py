@@ -8,5 +8,6 @@ from .models import Rdv
 # Create your views here.
 def calendrier(request):
 
+    days = [date.today() + datetime.timedelta(days=i) for i in range(0, 7)]
     rdv = [Rdv.objects.filter(date__day = date.today().day + i) for i in range(0, 7)]
-    return render(request, 'calendrier/calendrier.html', {'rdv': rdv})
+    return render(request, 'calendrier/calendrier.html', {'rdv': rdv, 'days': days})
