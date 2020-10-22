@@ -1,0 +1,7 @@
+{% extends 'cal/base.html' %}
+{% block content %}
+    <h2>{{ event_detail.title }}</h2>
+    <div>{{ event_detail.description }}</div>
+    <div>start at : {{ event_detail.start }}</div>
+    <div>finish at : {{ event_detail.end }}</div>
+{% endblock %}
