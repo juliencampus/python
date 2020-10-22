@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'mycalendar.apps.MycalendarConfig',
+    'schedule',
+    'djangobower',
+    'django.template.context_processors.request',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,7 +121,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATICFILES_DIRS = [
+    'djangobower.finders.BowerFinder',
+]
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 	os.path.join(BASE_DIR, "static")
 ]
+
+BOWER_COMPONENTS_ROOT = '/PROJECT_ROOT/components/'
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'jquery-ui',
+    'bootstrap'
+)

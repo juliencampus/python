@@ -20,6 +20,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from clndr import views
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^appointments/', views.AppointmentList.as_view())

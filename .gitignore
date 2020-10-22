@@ -6,3 +6,4 @@ venv
 *.pyc
 Marie Laure/django/projet/projet/settings.py
 Ulys/django/apnter/apnter_front/node_modules
+*.pyc
