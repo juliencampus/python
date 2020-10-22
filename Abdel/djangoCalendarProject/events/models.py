@@ -13,15 +13,15 @@ class Event(models.Model):
     notes = models.TextField(u'Notes textuelles', help_text=u'Notes textuelles', blank=True, null=True)
 
     class Meta:
-        verbose_name = u'Planification'
+        verbose_name = u'R.D.V'
         verbose_name_plural = u'Planifications'
 
     def check_overlap(self, fixed_start, fixed_end, new_start, new_end):
         overlap = False
         if new_start == fixed_end or new_end == fixed_start:  # edge case
             overlap = False
-        elif (new_start >= fixed_start and new_start <= fixed_end) or (
-                new_end >= fixed_start and new_end <= fixed_end):  # innner limits
+        elif (fixed_start <= new_start <= fixed_end) or (
+                fixed_start <= new_end <= fixed_end):  # innner limits
             overlap = True
         elif new_start <= fixed_start and new_end >= fixed_end:  # outter limits
             overlap = True
