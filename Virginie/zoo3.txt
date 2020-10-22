@@ -1,0 +1,7 @@
+* poisson
+* abeille
+* morue
+* lemurien
+* cochon
+* chat
+* migale
