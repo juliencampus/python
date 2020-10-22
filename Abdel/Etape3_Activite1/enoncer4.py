@@ -1,4 +1,4 @@
-def phone_number(phone_directory, char="a"):
+def phone_number(phone_directory, char="A"):
     find_number_A = [x + ' : ' + phone_directory[x] for x in phone_directory if x[0] == char]
     print(f'Le numero de tel. qui commence par la lettre {char} est : {find_number_A}')
 
