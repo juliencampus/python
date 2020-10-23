@@ -40,12 +40,12 @@
             <ul class="object-tools">
                 <li>
                     <a href={{ previous_month }}>
-                        Previous month
+                        Mois précédent
                     </a>
                 </li>
                 <li>
                     <a href={{ next_month }}>
-                        Next month
+                        Mois suivant
                     </a>
                 </li>
             </ul>
@@ -53,8 +53,8 @@
         {% endblock %}
         {% if cl.formset and cl.formset.errors %}
             <p class="errornote">
-                {% if cl.formset.total_error_count == 1 %}{% translate "Please correct the error below." %}{% else %}
-                    {% translate "Please correct the errors below." %}{% endif %}
+                {% if cl.formset.total_error_count == 1 %}{% translate "Veuillez corriger l'erreur ci-dessous." %}{% else %}
+                    {% translate "S'il vous plaît corriger les erreurs ci-dessous." %}{% endif %}
             </p>
             {{ cl.formset.non_form_errors }}
         {% endif %}
@@ -81,7 +81,7 @@
                     <div id="changelist-filter">
                         <h2>{% translate 'Filter' %}</h2>
                         {% if cl.has_active_filters %}<h3 id="changelist-filter-clear">
-                            <a href="{{ cl.clear_all_filters_qs }}">&#10006; {% translate "Clear all filters" %}</a>
+                            <a href="{{ cl.clear_all_filters_qs }}">&#10006; {% translate "Effacer tous les filtres" %}</a>
                         </h3>{% endif %}
                         {% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
                     </div>
