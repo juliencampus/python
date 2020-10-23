@@ -19,5 +19,7 @@ from calendrier import views
 
 urlpatterns = [
     path('', views.calendrier, name="calendrier"),
+    path('rdv/<int:idHeure>/<str:date>', views.takerdv, name="takerdv"),
+    path('saverdv/', views.saveRdv),
     path('admin/', admin.site.urls),
 ]

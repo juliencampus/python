@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Etape 4/Etape_4_Jeux" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Django" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Django/projet" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
