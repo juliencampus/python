@@ -7,33 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-<br>
 
-<div class="container">
+<div class="container-fluid bg-warning">
+        <a class="btn btn-success" href="/{{before|date:'o-m-d'}}">Semaine précédente {{ before|date:'d/m' }}</a>
+        <a class="btn btn-danger" href="/admin/logout">Logout : {{ user }}</a>
+        <a class="btn btn-success" href="/{{after|date:'o-m-d'}}">Semaine suivante {{ after|date:'d/m' }}</a>
 <div class="row">
 
 {% for day, rdv in days.items %}
     {% if day.isoweekday < 6 %}
-<div class="card col" style="width: 18rem;">
+<div class="card col bg-secondary" style="width: 18rem;">
     <div class="card-body">
 
-        <p class="card-title">{{ day|date:'l d/m' }}</p>
-        <hr>
+        <p class="card-title text-white"><u>{{ day|date:'l d/m' }}</u></p>
+<!--        <hr>-->
+        <div class="card mb-3 {{ el.2}}" style="max-width: 18rem;">
         {% for el in rdv %}
-            {% if forloop.counter0|divisibleby:4  %}
-        <p class="card-text" style="font-size: 14px; color: {{el.3}};"><b>{{ el.0|date:'H:i' }} {{el.3}}</b></p>
-                <p class="card-text" style="font-size: 14px;">{{ el.1 }}</p>
-                <hr>
-            {% else %}
-                <p class="card-text" style="font-size: 10px; color: {{ el.3 }};">{{ el.0|date:'H:i' }}</p>
-                <p class="card-text" style="font-size: 10px;">{{ el.1 }}</p>
-                <hr>
-            {% endif %}
+
+                {% if forloop.counter0|divisibleby:4  %}
+            <hr>
+                    <div class="card-text {{ el.2 }} text-warning" style="font-size: 18px;">{{ el.0|date:'H:i' }} {{ el.1 }}</div>
+
+                {% else %}
+                    <div class="card-text {{ el.2 }} text-warning" style="font-size: 10px;">{{ el.0|date:'H:i' }} {{ el.1 }}</div>
+                {% endif %}
         {% endfor %}
+        </div>
     </div>
 </div>
     {% endif %}
 {% endfor %}
+
 
 </div>
 </div>
