@@ -14,12 +14,12 @@ def findIndex(heure):
 
 def changeCreneau(rdv):
 
-    creneaux = [(datetime.datetime(hour=8, day=1, minute=0, year=2020, month=4) + datetime.timedelta(minutes= i * 15), mark_safe('<a href='+'/rdv/'+str(i)+'/'+str(date.today() + datetime.timedelta(days=i))+'>Prendre RDV</a>')) for i in range(0, 41)]
+    creneaux = [(datetime.datetime(hour=8, day=1, minute=0, year=2020, month=4) + datetime.timedelta(minutes= i * 15), mark_safe('<a href='+'/rdv/'+str(i)+'/'+str(date.today() + datetime.timedelta(days=i))+'>Prendre RDV</a>'), 'blue') for i in range(0, 41)]
 
     for el in rdv:
         totalTemps = round(el.types / 15)
         for i in range(0, totalTemps):
-            creneaux[findIndex(el.heure) + i] = (datetime.datetime(hour=el.heure.hour, day=1, minute=0, year=2020, month=4) + datetime.timedelta(minutes= i * 15), el.patient)
+            creneaux[findIndex(el.heure) + i] = (datetime.datetime(hour=el.heure.hour, day=1, minute=0, year=2020, month=4) + datetime.timedelta(minutes= i * 15), el.patient, 'red')
 
     return creneaux
 
@@ -49,7 +49,7 @@ def takerdv(request, idHeure, date):
 
     user = request.user.username
 
-    form = RdvForm(initial={'date': date, 'heure': heure})
+    form = RdvForm(initial={'date': date, 'heure': heure, 'patient': user})
 
     return render(request, 'calendrier/takerdv.html', {'heure': heureTotal, 'date': date, 'user': user, 'form': form})
 

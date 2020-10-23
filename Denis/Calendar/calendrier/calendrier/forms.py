@@ -5,3 +5,4 @@ class RdvForm(ModelForm):
      class Meta:
         model = Rdv
         fields = ['heure', 'date', 'types', 'patient']
+        readonly_fields = ['heure', 'date', 'patient']
