@@ -36,6 +36,13 @@ class Warrior(Character):
         self.magical_shield = self.magical_shield * 0.7
 
 
+def receiveDamage(defender, attacker):
+        print(defender.health)
+        new_health = defender.health + defender.magical_shield
+        new_health -= attacker.magical_attack
+        defender.health = new_health
+        print(defender.health)
+
 # Les magiciens
 player1 = Wizard()
 player2 = Wizard("Saroumane")
@@ -56,7 +63,7 @@ print(player3.name)
 print(player4.name)
 print(player5.name)
 print(player6.name)
-print(Warrior.__mro__)
+receiveDamage(player1, player2)
 
 
 
