@@ -46,12 +46,11 @@ def takerdv(request, idHeure, date):
 
     heureTotal = heure+':'+minute
 
+    userId = request.user.id
 
-    user = request.user.username
+    form = RdvForm(initial={'date': date, 'heure': heureTotal, 'patient': userId})
 
-    form = RdvForm(initial={'date': date, 'heure': heure, 'patient': user})
-
-    return render(request, 'calendrier/takerdv.html', {'heure': heureTotal, 'date': date, 'user': user, 'form': form})
+    return render(request, 'calendrier/takerdv.html', {'form': form})
 
 def saveRdv(request):
     f = RdvForm(request.POST)

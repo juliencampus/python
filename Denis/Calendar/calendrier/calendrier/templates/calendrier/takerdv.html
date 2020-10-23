@@ -12,7 +12,8 @@
 <div class="card col" style="width: 18rem;" align="center">
     <br>
 <form action="/saverdv/" method="post">
-    {{ user }}
+    <p>Prendre un Rendez-vous :</p>
+    <hr>
     {% csrf_token %}
     <div class="form-group">
     {{ form }}
