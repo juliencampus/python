@@ -8,6 +8,7 @@ class RdvForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(RdvForm, self).__init__(*args, **kwargs)
-        self.fields['heure'].widget.attrs.update({'class': 'form-group', 'disabled': 'disabled'})
-        self.fields['date'].widget.attrs.update({'class': 'form-group', 'disabled': 'disabled'})
-        self.fields['patient'].widget.attrs.update({'class': 'form-group', 'disabled': 'disabled'})
+        self.fields['heure'].widget.attrs.update({'class': 'form-group', 'readonly': 'readonly'})
+        self.fields['date'].widget.attrs.update({'class': 'form-group', 'readonly': 'readonly'})
+        self.fields['patient'].widget.attrs.update({'class': 'form-group', 'readonly': 'readonly', 'hidden': 'hidden'})
+        self.fields['patient'].label = ''

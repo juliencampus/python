@@ -52,4 +52,3 @@ class EventCalendar(HTMLCalendar):
         a('</table>')
         a('\n')
         return ''.join(v)
-
