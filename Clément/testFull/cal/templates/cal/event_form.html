@@ -1,8 +1,16 @@
 {% extends 'cal/base.html' %}
 {% block content %}
-    <form method="POST" class = "post-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" role="button" value="Submit">Create</button>
-    </form>
+    <a class="btn btn-primary" href="/calendar/" role="button">Calendar</a>
+    <div class="container">
+        <form method="POST" class = "post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if creation %}
+                <button class="btn btn-primary" role="button" type="Submit" name="create">Create</button>
+            {% else %}
+                <button class="btn btn-primary" role="button" type="Submit" value="update" name="update">Update</button>
+                <button class="btn btn-danger" role="button" type="Submit" value="delete" name="delete">Delete</button>
+            {% endif %}
+        </form>
+    </div>
 {% endblock %}
