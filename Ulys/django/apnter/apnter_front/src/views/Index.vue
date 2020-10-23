@@ -18,7 +18,8 @@
 import { mapActions, mapState } from 'vuex'
 import VueCal from 'vue-cal'
 import 'vue-cal/dist/vuecal.css'
-import AddButton from '@/components/AddButton'
+import AddButton from '@/components/AddButton'     
+
 export default {
     components: {
         VueCal,
@@ -26,6 +27,15 @@ export default {
     },
     created(){
         this.getAppointments()
+        const socket = new WebSocket('ws://127.0.0.1:8000')
+        socket.onopen =  () =>{
+            socket.send('listener', true)
+            socket.send('appointment', '123')
+        }
+        socket.onmessage = (data) => {
+            console.log(data)
+            this.$store.commit('setAppointments', data)
+        }
     },
     data: () => ({
         show: false
