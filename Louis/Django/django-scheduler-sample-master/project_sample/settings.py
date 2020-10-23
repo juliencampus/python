@@ -24,7 +24,7 @@ DATABASES = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = '*'
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -90,6 +90,7 @@ SECRET_KEY = '1-%gfd@@8l$8r=ck_7^dy5_x!a0f5%qfj@ix#!xig(_2zq&b&2'
 # List of callables that know how to import templates from various sources.
 
 MIDDLEWARE = [
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -175,3 +176,5 @@ TEMPLATES = [{
         ],
     },
 }]
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'

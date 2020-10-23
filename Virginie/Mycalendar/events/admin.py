@@ -7,7 +7,6 @@ import datetime
 from .utils import EventCalendar
 import calendar
 from django.urls import reverse
-from calendar import HTMLCalendar
 from django.utils.safestring import mark_safe
 
 
@@ -53,4 +52,3 @@ class EventAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Event, EventAdmin)
-
