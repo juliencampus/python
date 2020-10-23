@@ -20,9 +20,15 @@
         <p class="card-title">{{ day|date:'l d/m' }}</p>
         <hr>
         {% for el in rdv %}
-            <p class="card-text">{{ el.0|date:'H:i' }}</p>
-            <p class="card-text">{{ el.1 }}</p>
-            <hr>
+            {% if forloop.counter0|divisibleby:4  %}
+        <p class="card-text" style="font-size: 14px; color: {{el.3}};"><b>{{ el.0|date:'H:i' }} {{el.3}}</b></p>
+                <p class="card-text" style="font-size: 14px;">{{ el.1 }}</p>
+                <hr>
+            {% else %}
+                <p class="card-text" style="font-size: 10px; color: {{ el.3 }};">{{ el.0|date:'H:i' }}</p>
+                <p class="card-text" style="font-size: 10px;">{{ el.1 }}</p>
+                <hr>
+            {% endif %}
         {% endfor %}
     </div>
 </div>

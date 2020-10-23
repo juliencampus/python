@@ -1,6 +1,7 @@
 <template>
     <section>
-        <button v-if="!show" type="button" @click="updateComponent">show</button>
+        <v-btn v-if="!show" type="button" @click="updateComponent" >show</v-btn>
+        <AddButton v-if="show"/>
         <vue-cal style = "height: 880px" 
                 :events = "events"
                 :time-from = "9 * 60"
@@ -17,9 +18,11 @@
 import { mapActions, mapState } from 'vuex'
 import VueCal from 'vue-cal'
 import 'vue-cal/dist/vuecal.css'
+import AddButton from '@/components/AddButton'
 export default {
     components: {
-        VueCal
+        VueCal,
+        AddButton
     },
     created(){
         this.getAppointments()
@@ -31,12 +34,13 @@ export default {
         ...mapState(['appointments']),
 
         events(){
-            return this.appointments.map(obj => ({
+            let aptns_from_api = this.appointments.map(obj => ({
             start: new Date(Date.parse(obj.starts_at)),
             end: new Date(Date.parse(obj.ends_at)),
             title: obj.patient,
             class: obj.duration == "1800.0" ? "simple" : obj.duration == "2700.0" ? "spe" : "handle"
             }))
+            return aptns_from_api
         }
 
     },
