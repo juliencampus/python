@@ -17,7 +17,7 @@ export default new Vuex.Store({
     getAppointments({ commit }){
       var config = {
         // headers: {
-          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin": "http://localhost:8080",
         //   "Access-Control-Allow-Credentials": "true",
         //   "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
         //   "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,access-control-allow-origin",
@@ -25,7 +25,7 @@ export default new Vuex.Store({
         // }
       };
       axios
-        .get('http://192.168.0.110/appointments', config)
+        .get('http://127.0.0.1:8000/appointments/', config)
         .then(res => {
           let apnts = res.data  
           commit('setAppointments', apnts)

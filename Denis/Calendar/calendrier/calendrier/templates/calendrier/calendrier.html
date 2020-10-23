@@ -25,7 +25,7 @@
         {% for el in rdv %}
 
                 {% if forloop.counter0|divisibleby:4  %}
-            <hr>
+                    <hr>
                     <div class="card-text {{ el.2 }} text-warning" style="font-size: 18px;">{{ el.0|date:'H:i' }} {{ el.1 }}</div>
 
                 {% else %}

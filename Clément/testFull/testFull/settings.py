@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cal.apps.CalConfig',
+    'bootstrap_datepicker_plus'
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,10 @@ TEMPLATES = [
         },
     },
 ]
+
+BOOTSTRAP4 = {
+    'include_jquery': True,
+}
 
 WSGI_APPLICATION = 'testFull.wsgi.application'
 
